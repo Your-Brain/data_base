@@ -99,8 +99,10 @@ app.post("/login", async (req, res) => {
     const { email, password } = req.body;
     const user = await usermodel.findOne({ email });
 
-    if (!user) {
-      return res.send("User not found");
+   if (!user) {
+      return res.send(
+        "<script>alert('User not found! Please sign up first.'); window.location.href='/login';</script>"
+      );
     }
 
     const result = await bcrypt.compare(password, user.password);
@@ -110,11 +112,15 @@ app.post("/login", async (req, res) => {
       res.cookie("token", token, { httpOnly: true });
       res.redirect("/profile");
     } else {
-      res.send("Wrong password");
+      res.send(
+        "<script>alert('Wrong password! Please try again.'); window.location.href='/login';</script>"
+      );
     }
   } catch (err) {
     console.error(err);
-    res.status(500).send("Login error");
+    res.status(500).send(
+      "<script>alert('Login error! Please try again later.'); window.location.href='/login';</script>"
+    );
   }
 });
 
