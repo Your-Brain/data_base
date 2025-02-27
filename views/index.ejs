@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your_brain</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-zinc-900 flex items-center justify-center">
+    <div class="body bg-zinc-900 h-screen w-1/2 flex flex-col items-center justify-center p-4 rounded-xl">
+      <form
+        method="post"
+        action="/create"
+        enctype="multipart/form-data"
+        class="w-full flex flex-col justify-center items-center bg-zinc-800"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          class="w-1/2 my-2 p-2 bg-zinc-700 rounded-md text-white mt-4 focus:outline-none focus:bg-zinc-500"
+          required
+        />
+        <input
+          type="text"
+          name="email"
+          placeholder="Email"
+          class="w-1/2 my-2 p-2 bg-zinc-700 rounded-md text-white mt-4 focus:outline-none focus:bg-zinc-500"
+          required
+        />
+        <input
+          type="number"
+          name="age"
+          placeholder="Age"
+          class="w-1/2 my-2 p-2 bg-zinc-700 rounded-md text-white mt-4 focus:outline-none focus:bg-zinc-500"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          class="w-1/2 my-2 p-2 bg-zinc-700 rounded-md text-white mt-4 focus:outline-none focus:bg-zinc-500"
+          required
+        />F
+
+        <input
+          type="file"
+          name="image"
+          accept="image/*"
+          class="w-1/2 my-2 p-2 bg-zinc-700 rounded-md text-white mt-4 focus:outline-none focus:bg-zinc-500"
+          required
+        />
+        <input
+          type="submit"
+          value="Create Account"
+          class="w-1/3 my-2 p-2 bg-blue-700 rounded-xl text-white mt-4 focus:outline-none focus:bg-blue-500 cursor-pointer mb-9"
+        />
+      </form>
+    </div>
+  </body>
+</html>
