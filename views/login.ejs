@@ -12,7 +12,45 @@
         method="post"
         action="/login"
         class="w-full flex flex-col justify-center items-center bg-zinc-800"
-      >
+      ><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your_brain - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-zinc-900 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-zinc-800 w-full max-w-md sm:max-w-lg md:max-w-xl p-6 rounded-xl shadow-lg">
+      <form method="post" action="/login" class="flex flex-col space-y-4">
+        <h2 class="text-white text-2xl font-semibold text-center mb-4">Login</h2>
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          class="w-full p-3 bg-zinc-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          class="w-full p-3 bg-zinc-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          required
+        />
+
+        <input
+          type="submit"
+          value="Login"
+          class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-md cursor-pointer transition duration-200"
+        />
+      </form>
+    </div>
+  </body>
+</html>
+
         <input
           type="text"
           name="email"
